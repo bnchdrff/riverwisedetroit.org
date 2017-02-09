@@ -5,9 +5,9 @@
 wordpress_sites:
   riverwisedetroit.org:
     site_hosts:
-      - canonical: riverwise.dev
+      - canonical: 104.131.0.36
         redirects:
-          - www.riverwise.dev
+          - www.riverwisedetroit.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:bnchdrff/riverwisedetroit.org.git
     repo_subtree_path: site
