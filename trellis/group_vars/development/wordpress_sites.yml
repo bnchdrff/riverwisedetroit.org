@@ -5,9 +5,9 @@
 wordpress_sites:
   riverwisedetroit.org:
     site_hosts:
-      - canonical: riverwise.dev
+      - canonical: riverwisedetroit.org
         redirects:
-          - www.riverwise.dev
+          - www.riverwisedetroit.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: anonyben@gmail.com
     multisite:
