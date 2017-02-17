@@ -1,19 +1,148 @@
 @import "common/variables";
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
-// endbower
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
 
-@import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/grid";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 1em;
+  background: $brand-primary;
+  color: black;
+}
+
+body > header,
+body > footer,
+body > div.wrap.container {
+  background: white;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 0 1em;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body > header::after,
+body > footer::after,
+body > div.wrap.container::after {
+  @extend .clearfix;
+}
+
+body > footer {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+header a.brand {
+  @extend h1;
+  font-size: 200%;
+  display: block;
+  margin: 0;
+  padding: 1em 0;
+  border: 0;
+}
+
+.page-header h1 {
+  margin: 0;
+  padding: 1em 0 0 0;
+}
+
+.wp-post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid $brand-primary;
+}
+
+a:active,
+a:hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid lighten($brand-primary, 35%);
+}
+
+.issuem-featured-thumb-title {
+  margin-top: 1em;
+  font-size: initial;
+}
+
+.issuem-featured-thumb-title a,
+a.issuem_article_link,
+a.issuem-featured-thumbs-img {
+  border-bottom: none;
+}
+
+.issuem-featured-article-thumb img {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin blue-banded {
+  margin-top: .5em;
+  padding-top: .5em;
+  border-top: 2px solid $brand-primary;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 2px solid $brand-primary;
+}
+
+@media (min-width: 769px) {
+  #issuem-featured-article-thumbs-wrap {
+    display: flex;
+    margin: -1em 0 0 -1em;
+  }
+
+  .issuem-featured-article-thumb {
+    flex: 1;
+    margin: 1em 0 0 1em;
+    @include blue-banded;
+  }
+}
+
+.issuem_article {
+  padding: 1em 0;
+}
+
+ul#menu-main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu-main-menu li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+
+
+.single .entry-title {
+  padding: 1em 0;
+}
+
+.issuem_archive a {
+  margin-top: 1em;
+  display: inline-block;
+}
+
+a.featured_archives_cover {
+  border: none;
+}
