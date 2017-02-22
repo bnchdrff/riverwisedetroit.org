@@ -9,6 +9,7 @@ wordpress_sites:
         redirects:
           - www.riverwise.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:bnchdrff/riverwisedetroit.org.git
     admin_email: anonyben@gmail.com
     multisite:
       enabled: false
