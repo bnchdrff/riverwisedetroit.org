@@ -5,7 +5,7 @@
 wordpress_sites:
   riverwisedetroit.org:
     site_hosts:
-      - canonical: 104.131.0.36
+      - canonical: riverwisedetroit.org
         redirects:
           - www.riverwisedetroit.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
@@ -16,7 +16,7 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
-      provider: self-signed
+      enabled: true
+      provider: letsencrypt
     cache:
       enabled: true
